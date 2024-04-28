@@ -1,0 +1,223 @@
+{
+  "intents": [
+    {
+      "tag": "greetings1",
+      "patterns": [
+        "hi how are you?",
+        "hello",
+        "hi",
+        "hola",
+        "howdy",
+        "greetings",
+        "hey"
+      ],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Hello :)"
+      ]
+
+    },
+    {
+      "tag":"greetings2",
+      "patterns": [
+        "how are you doing?",
+        "how are you?",
+        "hi how are you?",
+        "hello how are you?"
+      ],
+      "responses": [
+        "I'm fine what about you?",
+        "Thanks for asking! I'm excellent. How about you?",
+        "Fine, thanks. What do you got for me today?"
+      ]
+    },
+
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "good Bye Aapi",
+        "see You later",
+        "till next time",
+        "meet you later"
+      ],
+      "responses": [
+        "See you, Have a nice day :)",
+        "Bye,Come back soon! ",
+        "Thanks For Asking! "
+      ]
+    },
+
+
+    {
+      "tag": "Flows Not consumed",
+      "patterns": [
+        "Not all messages or some of them are not consumed by MegaBroker; the user is aware of the total number of messages supposed to be valid under MegaBroker which does not match with the total valid FlowIn number found?",
+        "Bellows possible solutions for the problems according to different channels type?",
+        "Flows Not consumed"
+      ],
+      "responses": [
+        "Check that the queue manager is up How to check the queue manager is up ?\nCheck if the maximum connection pool is reached (as a workaround restart the queue manager and create a Jira ticket to investigate the issue)\nCheck that the queue is not stuck How to check the queue is not stuck?\nCheck that there is a free space disk available under middleware machine\nCheck that the device is active How to check the device is active?\nCheck the queue connectivity How to to check connectivity ?\nCheck the queue configuration; the channel name, connection factory, etc under MegaBroker correspond to those in the queue manager How to check device configuration?\nCheck the refresh time; make sure that messages are not consumed even after the lapse of time How to check the refresh time ?\nCheck that the folder path exists under the VM How to check the file device?\nCheck that the folder contains unconsumed messages\nCheck that the user have all rights (read/write) on the folder\nCheck that there is a free space disk\nCheck the file device connectivity How to check the device connectivity?\nCheck the file device configuration (folder path, file extension, etc.) How to check device configuration?\nCheck that folder path exists under sftp server\nCheck if maximum connection pool is reached\nCheck the disk size,\nCheck the device is active How to check the device is active?,\nCheck sftp device connectivity How to check the device connectivity?\nCheck sftp configuration (folder path, file extension, port, etc.) How to check device configuration?"
+      ]
+    },
+
+    {
+      "tag": "Case of FlowIn are stuck in status Received",
+      "patterns": [
+
+      "All messages are consumed but are not valid under MegaBroker; the flows are not under status Valid Flow ?",
+      "Please refer to the adequate solution according to the following cases ?",
+      "Case of FlowIn are stuck in status Received"
+
+      ],
+      "responses": [
+
+      "Wait some minutes and refresh\nCheck the database, the user have to ensure it's not full or not locked, if flows are under the same status after a while.\nRestart MegaBroker application, 'Ignore' the flowIn and click on 'Replay' How to replay Flow ?\nCreate a Jira ticket and provide log "
+    
+      ]
+    },
+
+    {
+      "tag": "Case of FlowIn are stuck in status 'Identification Failed'",
+      "patterns": [
+
+      "All messages are consumed but are not valid under MegaBroker; the flows are not under status Valid Flow ?",
+      "Please refer to the adequate solution according to the following cases ?",
+      "Case of FlowIn are stuck in status 'Identification Failed'"
+
+      ],
+      "responses": [
+
+      "Check the preparsing field of the adequate flow in configuration How to check the preparsing Field?\nCheck devices properties under the Flow in configuration. The flow file name or class name and extension should be same as mentioned in the flow In configuration How to check device properties?"
+    
+      ]
+    },
+
+
+
+    {
+      "tag": "Case of FlowIn are stuck in status 'In process' or 'Record Created",
+      "patterns": [
+
+      "All messages are consumed but are not valid under MegaBroker; the flows are not under status Valid Flow ?",
+      "Please refer to the adequate solution according to the following cases ?",
+      "Case of FlowIn are stuck in status 'In process' or 'Record Created'"
+      
+
+      ],
+      "responses": [
+
+      "Create a Jira ticket and provide logs file"    
+      ]
+    },
+
+
+
+    
+    {
+      "tag": "Case of FlowIn are stuck in status 'Parsing and mapping failed'",
+      "patterns": [
+
+      "All messages are consumed but are not valid under MegaBroker; the flows are not under status Valid Flow ?",
+      "Please refer to the adequate solution according to the following cases ?",
+      "Case of FlowIn are stuck in status 'Parsing and mapping failed'"
+      
+
+      ],
+      "responses": [
+
+      "Try the parse the message (flow in) via screen message parser  How to parse the message?\nParse the message using the source value of the default record (the user can refer to How to parse the message? and have to fill the mapping ID)"    
+      ]
+    },
+    
+
+
+
+        
+    {
+      "tag": "Case of FlowIn are stuck in status 'Flow with Errors'",
+      "patterns": [
+
+      "All messages are consumed but are not valid under MegaBroker; the flows are not under status Valid Flow ?",
+      "Please refer to the adequate solution according to the following cases ?",
+      "Case of FlowIn are stuck in status 'Flow with Errors'"
+      
+
+      ],
+      "responses": [
+        "Check the flowIn content. Generally, this issue affects the process with split; not all messages out are generated successfully\n Create a Jira ticket and provide logs"
+      ]
+    },
+
+
+
+            
+    {
+      "tag": "Problem : Flow out issues",
+      "patterns": [
+
+        "MegaBroker does not generate messages out or they are not under status 'Sent' (Flow out not sent to the destination)",
+       " Please refer to the adequate solution according to the following cases",
+        
+        "Case of Flow out stuck in status 'Created'"
+      
+
+      ],
+      "responses": [
+      "Create a Jira ticket and provide logs file\n As a workaround process it manually (this could be due to performance issue )"
+      ]
+    },
+
+
+    {
+      "tag": "Case of Flow out stuck in status 'Message Created'",
+      "patterns": [
+
+        "MegaBroker does not generate messages out or they are not under status 'Sent' (Flow out not sent to the destination)",
+       " Please refer to the adequate solution according to the following cases",
+        "Case of Flow out stuck in status 'Message Created'"
+      
+
+      ],
+      "responses": [
+      "Check the cut off configuration How to check the Cut Off configuration?\n As a workaround send it manually (this could be due to performance issue )"
+      ]
+    },
+
+
+    {
+      "tag": "Case of Flow out stuck in status 'Generation Failed'",
+      "patterns": [
+
+        "MegaBroker does not generate messages out or they are not under status 'Sent' (Flow out not sent to the destination)",
+       " Please refer to the adequate solution according to the following cases",
+        "Case of Flow out stuck in status 'Message Created'"
+      
+
+      ],
+      "responses": [
+        "Create a Jira ticket and provide logs file"
+      ]
+    },
+
+
+    
+    {
+      "tag": "Case of Flow out stuck in status Waiting Ack",
+      "patterns": [
+
+        "MegaBroker does not generate messages out or they are not under status 'Sent' (Flow out not sent to the destination)",
+        "Please refer to the adequate solution according to the following cases",
+        "Case of Flow out stuck in status Waiting Ack"
+      
+
+      ],
+      "responses": [
+        "Check the swift machine configuration\nCheck the ack configuration\nPing the swift machine to check the connection\nAs a workaround Manual Ack the flow"
+      ]
+    }
+    
+    
+
+    
+  ]
+}
